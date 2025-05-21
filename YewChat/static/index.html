@@ -2,8 +2,52 @@
 <html>
     <head>
         <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://cdn.tailwindcss.com"></script>
-        <title>Yewchat!</title>
+        <script>
+            tailwind.config = {
+                darkMode: 'class',
+                theme: {
+                    extend: {}
+                }
+            }
+        </script>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/134/134914.png" type="image/png">
+        <title>YewChat | Modern Rust Chat App</title>
+        <style>
+            body {
+                font-family: 'Poppins', sans-serif;
+                background-color: #f9fafb;
+            }
+            .dark body {
+                background-color: #111827;
+            }
+            .animate-pulse-slow {
+                animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+            }
+            @keyframes pulse {
+                0%, 100% {
+                    opacity: 1;
+                }
+                50% {
+                    opacity: .7;
+                }
+            }
+            .animate-bounce-slow {
+                animation: bounce 2s infinite;
+            }
+            @keyframes bounce {
+                0%, 100% {
+                    transform: translateY(-5%);
+                    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+                }
+                50% {
+                    transform: translateY(0);
+                    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+                }
+            }
+        </style>
     </head>
     <body>
         <script src="yewchat.js"></script>
